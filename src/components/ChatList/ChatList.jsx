@@ -131,6 +131,7 @@ const ChatList = ({ searchText }) => {
                                     chat = a
                                     chat["id"] = chat.chatId
                                     dispatch(setSelectedChat(chat))
+                                    dispatch(setSelectedChatList([]))
                                 })
 
                             }
