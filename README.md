@@ -41,3 +41,11 @@ The Web WhatsApp clone is built using the following technologies:
 - Redux: A state management library for managing application state.
 - Socket.io: A library for enabling real-time, bidirectional communication between clients and servers.
 - SCSS: Cascading Style Sheets for styling the user interface.
+
+## Screenshots
+
+![Login Page](https://github.com/kadeezyy/Web-WhatsApp/blob/master/src/img/photo_2023-05-25_21-37-50.jpg)
+
+![Main Page](https://github.com/kadeezyy/Web-WhatsApp/blob/master/src/img/photo_2023-05-25_21-37-51.jpg)
+
+![Error message](https://github.com/kadeezyy/Web-WhatsApp/blob/master/src/img/photo_2023-05-25_21-37-52.jpg)
