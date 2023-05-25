@@ -27,8 +27,9 @@
 
         .listHead {
             display: flex;
-            justify-content: space-between;
+            // justify-content: space-between;
             margin-bottom: 5px;
+            align-items: center;
 
             h4 {
                 font-size: 1.1em;
@@ -59,6 +60,9 @@
             }
         }
     }
+}
 
-
+.add-icon {
+    font-size: 24px;
+    margin-right: 5px;
 }

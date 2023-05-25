@@ -13,9 +13,12 @@ const RightSideBar = () => {
     const [textMessage, setTextMessage] = useState("")
     const dispatch = useDispatch()
 
-    // useEffect(() => {
-    //     console.log('Chat list updated:', chatList);
-    // }, [chatList]);
+    useEffect(() => {
+        // console.log('Chat list updated:');
+    }, [chatList]);
+    useEffect(() => {
+        // console.log('Selected chat is updated')
+    }, [selectedChat])
 
 
     const getChatMessages = () => {
@@ -65,7 +68,9 @@ const RightSideBar = () => {
             const response = await fetch(url, param)
             if (response.ok) {
                 const updatedChatList = [...chatList, textMessage];
-                setTimeout(() => {dispatch(setSelectedChatList(updatedChatList))}, 300)
+                setTimeout(() => {
+                    dispatch(setSelectedChatList(updatedChatList))
+                }, 300)
             }
         } catch (error) {
             console.log(error)
@@ -83,10 +88,11 @@ const RightSideBar = () => {
             <div className="chatBox">
                 {chatList.length !== 0 && getChatMessages()}
             </div>
-            {selectedChat.id !== undefined && <div className="input-container">
-                <InputComponent searchText={textMessage} handleOnChange={handleTextMessageChange} placeholder={"Type a message"} className="text-input" />
-                <IonIcon icon={sendOutline} className='send-icon' onClick={handleSend} />
-            </div>}
+            {selectedChat.id !== undefined &&
+                <div className="input-container">
+                    <InputComponent searchText={textMessage} handleOnChange={handleTextMessageChange} placeholder={"Type a message"} className="text-input" />
+                    <IonIcon icon={sendOutline} className='send-icon' onClick={handleSend} />
+                </div>}
         </div>
     )
 }

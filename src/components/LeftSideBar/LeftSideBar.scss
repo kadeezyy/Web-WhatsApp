@@ -10,10 +10,11 @@
     width: 100%;
     height: 60px;
     background-color: #ededed;
-    text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
     justify-content: center;
-    vertical-align: middle;
+    align-items: center;
+    // vertical-align: middle;
 }
 
 .searchContainer {

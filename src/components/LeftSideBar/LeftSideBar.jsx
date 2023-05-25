@@ -8,9 +8,6 @@ const LeftSideBar = () => {
     const [searchText, setSearchText] = useState("")
     const handleSearchBarChange = (event) => {
         setSearchText(event.target.value)
-        if (searchText.trim() !== "") {
-            
-        }
     }
     
     return (
