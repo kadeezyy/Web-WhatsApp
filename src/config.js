@@ -1,3 +1,17 @@
 export const api_host = 'https://api.green-api.com'
-export const idInstance = '1101824229'
-export const api_token = '91ae0a2b130047b8bf7b530ff468cb7d385319b9e9a54c9fb4'
+export const idInstance = localStorage.getItem('idInstance')
+export const api_token = localStorage.getItem('api_token')
+
+export const setIdInstance = (id) => {
+    if (id === undefined || id === "") {
+        throw new Error("Invalid id instance credentials")
+    }
+    idInstance = id
+}
+
+export const setApiToken = (token) => {
+    if (token === undefined || token === "") {
+        throw new Error("Invalid api token credentials")
+    }
+    api_token = token
+}

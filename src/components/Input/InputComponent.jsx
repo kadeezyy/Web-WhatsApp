@@ -1,12 +1,11 @@
 import React from 'react'
 import { IonIcon } from '@ionic/react';
-import { searchOutline } from 'ionicons/icons';
 import './InputComponent.scss'
 
-const InputComponent = ({ handleOnChange, placeholder, searchText }) => {
+const InputComponent = ({ handleOnChange, placeholder, searchText, icon }) => {
     return (
         <div className="search-container">
-            <IonIcon icon={searchOutline} className='search-icon' />
+            {icon && <IonIcon icon={icon} className='search-icon' />}
             <div className="search-bar">
                 <input type="text" className="search-bar"
                     placeholder={placeholder}
